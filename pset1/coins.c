@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main()
+{
+    int y = 0;
+    printf("Enter the amount of change ");
+    int x = GetFloat() * 100;
+        while (x > 0)
+    {
+        while (x >= 25)
+        {
+            x = x - 25;
+            y = y + 1;
+            printf("You used one quarter \n");
+        }
+        if (x == 0)
+        {
+            break;
+        }
+        while (x >= 10)
+        {
+           x = x - 10;
+           y = y + 1;
+            printf("You used one dime \n");
+        }
+        if (x == 0)
+        {
+            break;
+        }
+        while (x >= 5)
+        {
+            x = x - 5;
+            y = y + 1;
+            printf("You used one nickle \n");
+        }
+        if (x == 0)
+        {
+            break;
+        }
+        while (x >= 1)
+        {
+            x = x - 1;
+            y = y + 1;
+            printf("You used one penny \n");
+        }
+        if (x == 0)
+        {
+            break;
+        }
+    }
+    printf("The number of coins neccessary is %d ", y);}
+
